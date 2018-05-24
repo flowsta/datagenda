@@ -3,14 +3,16 @@
 #+TAGS: boletín, periodismodatos, tinyletter, 
 #+DESCRIPTION: Calendario de eventos relacionados con el conocimiento abierto para 2016
 #+TITLE: Datagenda, la agenda del Datalab
-#+OPTIONS: num:nil todo:nil pri:nil tags:nil ^:nil TeX:nil toc:3
+#+OPTIONS: num:nil todo:nil pri:nil tags:nil ^:nil TeX:nil toc:nil
+#+OPTIONS:  p:with-planning
+#+HTML_HTML: <html lang="es">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css"/>
 
-Agenda de eventos relacionados o de interés para las distintas comunidades de datos: periodismodatos, datosabiertos, datascientists, conocimiento abierto, etc.
+
+Agenda de eventos relacionados o de interés para las distintas comunidades de datos: periodismodatos, visualización de datos, datosabiertos, datascientists, conocimiento abierto, etc.
 
 Si tienes un evento, una beca, una oferta de trabajo, un curso, en enlace de interés o cualquier otra idea, duda o sugerencia que proponer, añade [[https://github.com/medialab-prado/datagenda/issues/new][una nueva issue]].
 
-Navega en las actividades de [[https://github.com/medialab-prado/datagenda/blob/master/2017.org][2017]] o descárgate los archivos [[https://github.com/medialab-prado/agenda/blob/master/2017.ics][ics]]
-* Estructura 
 La estructura de los documentos es:
 
 - Actividades por meses
@@ -20,368 +22,118 @@ La estructura de los documentos es:
 - Enlaces de interés
 - Ideas
 
-La /Datagenda/ es un proyecto del [[http://medialab-prado.es/visualizar][Datalab]] de Medialab-Prado.
-** Actividades por meses
-*** Enero 2017
-**** Taller de Periodismo de Datos El País
-**** Mi primera configuración Emacs
-  - Cuándo: <2017-01-31 mar 18:30-20:30>
-  - Dónde: Medialab-Prado, Alameda 15, 28014, Madrid
-  - Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
-  - URL: https://www.meetup.com/es-ES/Grupo-de-Usuarios-de-R-de-Madrid/events/236546948/
 
-  Si tus compañerxs te miran raro cuando abres Vim, si sientes envidia
-  de los magos que usan emacs y te han hablado de org, magit y todas las
-  maravillas; si has instalado Emacs, y es totalmente distinto a lo que
-  habías visto, blanco y vacío, no sabes como usarlo...
-
-  En esta charla hablaremos un poco de como empezar con emacs, una
-  pequeña introducción a elisp y como configurar emacs a tu gusto.
-
-  Los temas que se cubrirán serán:
-  - Introducción a Emacs
-  - Introducción a elisp
-  - Mi primera configuración
-  - Configuración modular
-  - Configuración basada en orgmode
-
-*** Abril 2017
-**** Dataharvest 2017
-  <2016-05-18 mié>--<2016-05-21 sáb>
-
-*** Mayo 2017
-**** V Jornadas Periodismo Datos #JPD17
-
-  - Cuándo: <2017-05-04 jue>--<2017-05-07 dom>
-  - Dónde: Medialab-Prado, Alameda 15, 28014, Madrid
-  - Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
-  - URL: http://medialab-prado.github.io/jpd17
-
-*** Junio 2017
-**** Curso
-*** Septiembre 2017
-
-**** Visualizar'17: Migraciones
-     :PROPERTIES:
-     :URL:      http://medialab-prado.es/visualizar
-     :Localidad: Madrid
-     :E-mail:   visualizar@medialab-prado.es
-     :Entidad:  Datalab
-     :Sede:     Medialab-Prado
-     :Dirección: Calle de la Alameda, 15. 28014 Madrid (España)
-     :GoogleMaps: https://www.google.es/maps/place/Calle+de+la+Alameda,+15,+28014+Madrid/@40.4105245,-3.6957741,17z/data=!4m5!3m4!1s0xd4226286173786b:0x111584dabe22d0f4!8m2!3d40.4105204!4d-3.6935854?hl=es
-     :END:
-  Taller de visualización de datos /Visualizar'17: Migraciones/.
-  <2017-09-15 vie>--<2017-09-30 sáb>
-  - Artículo: http://medialab-prado.es/article/visualizar17-migraciones
-  - Convocatoria de proyectos:http://medialab-prado.es/article/visualizar17-migraciones-convocatoria-de-proyectos
-  - Proyectos seleccionados: http://medialab-prado.es/article/visualizar17-migraciones-proyectos-seleccionados
-  - Convocatoria de colaboradorxs:http://medialab-prado.es/article/visualizar17-migraciones-convocatoria-de-colaboradorxs
-
-*** Octubre 2017
-**** Curso de datos abiertos adaptado a la administración local
-     :PROPERTIES:
-     :URL:      http://madrid.theodi.org/courses/curso-de-datos-abiertos-adaptado-la-administracion-local/
-     :Dónde:    ETSIINF, C/ Ciruelos nº 2, Boadilla del Monte, 28669, Madrid (España)
-     :E-mail:   odi_madrid@delicias.dia.fi.upm.es
-     :GoogleMaps: http://maps.google.com/maps?z=16&q=escuela+t%C3%A9cnica+superior+de+ingenieros+inform%C3%A1ticos+(etsiinf)+universidad+polit%C3%A9cnica+de+madrid+avda.+montepr%C3%ADncipe,+s/n+boadilla+del+monte,+28660,+espa%C3%B1a
-     :Localidad: Boadilla del Monte
-     :Entidad:  ODI Madrid
-     :END:
-
-***** Introducción a los datos abiertos
-      :PROPERTIES:
-      :Duración: 4 horas
-      :END:
-  <2017-10-09 lun>
-  - Descubriendo los datos abiertos
-  - Copyright, licencias y datos abiertos
-  - Usabilidad de los datos abiertos
-  - Ejemplos
-
-***** Modelo de apertura de datos
-      :PROPERTIES:
-      :Duración: 2 horas
-      :END:
-  <2017-10-10 mar>
-
-
-  - Protocolos de apertura de datos
-  - Recomendaciones de ejecución
-
-***** Marco legal
-      :PROPERTIES:
-      :Duración: 2 horas
-      :END:
-  <2017-10-10 mar>
-
-
-  - Directivas europeas y otras normas e iniciativas internacionales
-  - Normativa nacional (y ejemplos de situación en otros países)
-  - Normativa regional
-  - Normativa local
-  - Licencias de datos
-
-***** Datos enlazados. Teoría y práctica
-      :PROPERTIES:
-      :Duración: 6 horas
-      :END:
-  <2017-10-17 mar>
-
-
-  - Descubriendo los datos abiertos
-  - Copyright, licencias y datos abiertos
-  - Usabilidad de los datos abiertos
-  - Fundamentos de la web semántica y conjuntos de datos
-  - Vocabularios y conjuntos de datos
-  - Empezando con datos abiertos en la práctica
-  - Publicación de datos enlazados: Virtuoso y Pubby
-
-***** Vocabularios, modelos de datos y ontologías
-      :PROPERTIES:
-      :Duración: 6 horas
-      :END:
-  <2017-10-18 mié>
-
-  - Introducción a la web semántica
-  - RDF (S)
-  - OWL
-  - Protege
-  - Herramientas para documentación y publicación
-
-***** Extracción, transformación y carga de datos (ETL)
-      :PROPERTIES:
-      :Duración: 4 horas
-      :END:
-  <2017-10-25 mié>
-
-  - Introducción (ETL vs NoETL)
-  - Modelos de datos (SQL vs No-SQL)
-  - Patrones de transformación (Batch vs Streaming)
-  - Herramientas (Rule-based vs Code-bassed)
-
-***** Publicación en CKAN y uso de su API
-      :PROPERTIES:
-      :Duración: 4 horas
-      :END:
-  <2017-10-26 jue>
-
-  - Conceptos básicos (organizaciones, grupos, datasets, recursos)
-  - Añadiendo nuevas funcionalidades – Uso de extensiones
-  - Carga automática de datos – Uso de la API
-  - DCAT
-  - Federación con datos.gob.es
-
-***** Visualización de datos
-      :PROPERTIES:
-      :Duración: 4 horas
-      :END:
-  <2017-10-26 jue>
-
-  - Grafos
-  - Métricas sobre grafos
-  - Visualización de big data
-**** Gigapp 2017
-     :PROPERTIES:
-     :URL:      https://congreso.gigapp.org/
-     :Localidad: Madrid
-     :Entidad:  GIGAPP
-     :Sede:     Medialab-Prado
-     :END:
-  <2017-10-25 mié>--<2017-10-28 sáb>
-**** Transeuropa 2017
-     :PROPERTIES:
-     :END:
-
-     :PROPERTIES:
-     :URL:      https://transeuropafestival.eu/
-     :END:
-  A festival of Arts, Politics and Culture
-  <2017-10-25 mié>--<2017-10-29 dom>
-*** Noviembre 2017
-**** Asedie: 9ª Conferencia Internacional de Reutilización de Información del Sector Público
-     :PROPERTIES:
-     :Dónde:    Instituto Geográfico Nacional, General Ibáñez de ïbero, 3. 28003 Madrid
-     :Cuándo:   <2017-11-30 jue>
-     :Ciudad:   Madrid
-     :END:
- http://www.asedie.es/9_conferencia_internacional.html
-*** Diciembre 2017
-
-**** CryptoMarbella Hackathon
-     :PROPERTIES:
-     :Localidad: Marbella
-     :Provincia: Málaga
-     :CCAA:     Andalucía
-     :URL:      https://cryptomarbella.com/
-     :Cuándo:   <2017-12-16 sáb>
-     :END:
- [[https://cryptomarbella.com/][Crypto Marbella Hackathon]] provides a focused environment for teams to design, develop and complete an intense
- iteration of work, hopefully resulting in software/blockchain that solves one of the many complex challenges
- we face in society today.
- - Cuándo: <2017-12-16 sáb>
-*** Enero 2018
-**** El Confidencial Editors Lab
-     :PROPERTIES:
-     :URL:      https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/
-     :Ciudad:   Madrid
-     :País:     España
-     :Entidad:  El Confidencial
-     :Fecha:    <2018-01-17 mié>--<2018-01-18 jue>
-     :END:
- [[https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/][El Confidencial Editors Lab]], Prototyping the Future of News in Madrid, 18-19 January 2018.
- - Cuándo: <2018-01-17 mié>--<2018-01-18 jue>
- - Dónde: El Confidencial
- - URL: https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/
-
-
-*** Febrero 2018
-**** Día del Amor por el Software Libre
- - Dónde: Medialab-Prado 
- - Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
- - Cuándo: <2018-02-14 mié>
-**** Software Libre para la ciencia de datos
- - Dónde: Medialab-Prado 
- - Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
- - Cuándo: <2018-02-15 jue>--<2018-02-17 sáb>
-**** Lanzamiento de la Convocatoria del Taller de Periodismo de Datos 2018
- - Dónde: Medialab-Prado 
- - Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
- - Cuándo: <2018-02-01 jue>
- Taller que gira en torno a la movilidad de Madrid. Se plantea el siguiente itinerario:
- - Febrero, formación en datos, Semana del Software Libre
- - Marzo, búsqueda de datos, Día de los Datos Abiertos.
- - Abril-Junio: 3 sesiones de trabajo con los proyectos seleccionados 
-*** Marzo 2018
-**** Día de los datos abiertos
- - Dónde: Medialab-Prado 
- - Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
- - Cuándo: <2018-03-03 sáb>
-
-*** Mayo 2018
-**** GEN Summit 2018
-     :PROPERTIES:
-     :Localidad: Lisboa
-     :País:     Portugal
-     :Cuándo:   <2018-05-30>
-     :END:
- - Dónde: Medialab-Prado 
- - Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
- - Cuándo: <2018-05-30 mié>--<2018-06-01 vie>
- The [[https://www.gensummit.org/][GEN Summit]] will present you with solutions and insights that can make your journalism more impactful – and sustainable. We’re making a place for thought-provoking conversations across three themes:  
- - Disruption (30 May)
- - Personalisation (31 May)
- - Monetisation (1 June)
-
-** Todo el año 2017
-** Becas, ofertas de trabajo
-
-*** Project lead data and civil liberties
-    DEADLINE: <2017-06-08 jue>
+* Actividades por meses
+** Enero 2018
+*** El Confidencial Editors Lab
     :PROPERTIES:
-    :Organización: Tactical Tech
-    :URL:      https://tacticaltech.org/project-lead-data-and-civil-liberties
+    :URL:      https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/
+    :Ciudad:   Madrid
+    :País:     España
+    :Entidad:  El Confidencial
+    :Fecha:    <2018-01-17 mié>--<2018-01-18 jue>
     :END:
-
-*** GHC17
-*** Pass-It-On Awards Program
-    SCHEDULED: <2017-12-01 vie>
- https://anitaborg.org/awards-grants/pass-it-on-awards-program/
- The Anita Borg Systers Pass-It-On (PIO) Awards honor Anita Borg’s desire to create a network of  women technologists helping one another. The cash awards, funded by donations from the Systers Online Community and others, are intended as means for women established in technological fields to support women seeking their place in the fields of technology. The program is called “Pass-It-On” because it comes with the moral obligation to “pass on” the benefits gained from the award.
-
- El periodo de aplicación de este año fue del <2016-12-14 mié> al <2017-03-29 mié>
+[[https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/][El Confidencial Editors Lab]], Prototyping the Future of News in Madrid, 18-19 January 2018.
+- Cuándo: <2018-01-17 mié>--<2018-01-18 jue>
+- Dónde: El Confidencial
+- URL: https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/
 
 
-*** Communications internship
-    DEADLINE: <2017-06-08 jue>
+** Febrero 2018
+*** Día del Amor por el Software Libre
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-02-14 mié>
+*** Software Libre para la ciencia de datos
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-02-15 jue>--<2018-02-17 sáb>
+*** Lanzamiento de la Convocatoria del Taller de Periodismo de Datos 2018
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-02-01 jue>
+Taller que gira en torno a la movilidad de Madrid. Se plantea el siguiente itinerario:
+- Febrero, formación en datos, Semana del Software Libre
+- Marzo, búsqueda de datos, Día de los Datos Abiertos.
+- Abril-Junio: 3 sesiones de trabajo con los proyectos seleccionados 
+** Marzo 2018
+*** Día de los datos abiertos
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-03-03 sáb>
+
+** Mayo 2018
+*** GEN Summit 2018
     :PROPERTIES:
+    :Localidad: Lisboa
+    :País:     Portugal
+    :Cuándo:   <2018-05-30>
     :END:
-    :PROPERTIES:
-    :URL:      https://tacticaltech.org/communications-internship-paid
-    :Organización: Tactical Tech
-    :END:**
-  Translator
-    :PROPERTIES:
-    :Organización: Tactical Tech
-    :URL:      https://tacticaltech.org/jobs/translator
-    :END:
-  We are looking for translators who can translate from English into
-  one of our core languages (Arabic, French, Portuguese, Russian,
-  Spanish).
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-05-30 mié>--<2018-06-01 vie>
+The [[https://www.gensummit.org/][GEN Summit]] will present you with solutions and insights that can make your journalism more impactful – and sustainable. We’re making a place for thought-provoking conversations across three themes:  
+- Disruption (30 May)
+- Personalisation (31 May)
+- Monetisation (1 June)
 
-*** System Operations and Development Position
-    :PROPERTIES:
-    :URL:      https://tacticaltech.org/systems-operations-and-development-position
-    :Localidad: Berlín
-    :Tiempo:   completo
-    :Entidad:  Tactical Technology Collective
-    :E-mail:   jobs@tacticaltech.org
-    :END:
- Formará parte del equipo de tecnologías de la información y será responsable de las operación y mantenimiento de los ordenadores, la red y los sistemas relacionados.
+** Junio 2018
 
-*** Consultants en Tactical Technology Collective
-    :PROPERTIES:
-    :URL:      https://tacticaltech.org/jobs
-    :Localidad: Berlín
-    :Tiempo:   completo
-    :Entidad:  Tactical Technology Collective
-    :E-mail:   jobs@tacticaltech.org
-    :Fingerprint: F332 42F9 DD5B 91D9 AEF3 108A 6AC5 FEC2 7C8B 5F0D.
-    :END:
- Diversas ofertas de trabajo como consultorxs para TTC: researchers, trainers, facilitators, translators, designers (various), illustrators, animation designers, editor.
-
-** Cursos
-*** Learno.net
-    :PROPERTIES:
-    :URL:      https://learno.net/
-    :END:
- LEARNO.NET is an initiative of the European Journalism Centre
- (EJC). The EJC is a non-profit international foundation with the
- mission to improve and strengthen journalism and the news media in the
- interest of a functioning democratic public sphere. In this spirit,
- the EJC has always focused very much on training and capacity
- building, and LEARNO.NET is the next logical step on that way.
-
-*** HTML
-    :PROPERTIES:
-    :Autoría:  Raúl Jiménez Ortega
-    :URL:      http://www.cursohtml5desdecero.com
-    :Licencia: CC-BY-NC-SA 4.0 Internacional
-    :Repo:     https://github.com/hhkaos/cursohtml5desdecero/
-    :END:
-
- - Enseñar los elementos más comunes de HTML5, CSS3 y JavaScript.
- - Mostrar dónde podrás resolver tus dudas cuando tengas problemas.
- - Explicar cómo trabajar con algunas de las herramientas que usan los profesionales del mundo real como son Github o las herramientas para desarrolladores de Google Chrome.
+*** Taller de Periodismo de Datos 2018, primera sesión de trabajo
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-06-08 vie>--<2018-06-10 dom>
 
 
-*** Lookout 360º
-    DEADLINE: <2017-12-18 lun>
-    :PROPERTIES:
-    :URL:      http://apply.thelookoutstation.com/
-    :END:
- A 6-month Climate Change Immersive Story Accelerator
- Lookout360° is the pilot project of our new 6-month immersive storytelling accelerator programme. It combines in-field training and 3-month mentorship to support journalists produce immersive stories with a focus on climate change.
+*** Taller de Periodismo de Datos 2018, segunda sesión de trabajo
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-06-22 vie>--<2018-06-24 dom>
 
- The European Forest Institute and the Global Editors Network are joining forces to launch the pilot project which supports journalists produce 360-degree videos on climate change and people’s lives.
+* Todo 2018
 
- A total of 10 journalists and producers from 10 media houses based in Europe and beyond will be invited to a bootcamp that offers a training on climate change storytelling, as well as a 101 crash course on 360° video filming and post-production. To offer a unique first-hand experience in producing a story focusing on how the local communities are being affected by climate change, the bootcamp will take place in the extreme north of Finland, where the Sami people, the indigenous communities in Lapland, live.
+** JournocodersMAD
+- Dónde: Medialab-Prado 
+- Mapa: http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359
+- Cuándo: <2018-05-24 jue +1w>
 
- After the in-field bootcamp, the programme gathers scientists and 360-degree video experts to support the participants in developing, iterating and publishing a story within a 3-month period. The final projects will be showcased at the GEN Summit in Lisbon on 30 May – 1 June 2018, both on the conference main stage and in the GEN Dome, an immersive storytelling-focused exhibition.
-*** Curso gratuito de SIG aplicado a gestión municipal
-    :PROPERTIES:
-    :URL:      https://blog.gvsig.org/2017/09/25/curso-gratuito-de-sistemas-de-informacion-geografica-aplicados-a-gestion-municipal-temario-y-1er-modulo-diferencias-entre-sig-y-cad/
-    :END:
- [[https://blog.gvsig.org/2017/09/25/curso-gratuito-de-sistemas-de-informacion-geografica-aplicados-a-gestion-municipal-temario-y-1er-modulo-diferencias-entre-sig-y-cad/][Curso gratuito]] para adquirir toda la formación necesaria para aplicar los Sistemas de Información Geográfica a la gestión municipal. Un curso basado en la utilización de la suite de productos gvSIG, un catálogo de soluciones en software libre para trabajar con la componente ‘Geo’ y que se compone de soluciones de escritorio, móvil y web.
-** Enlaces de interés
+* Becas, ofertas de trabajo
+* Cursos
+** Learno.net
+   :PROPERTIES:
+   :URL:      https://learno.net/
+   :END:
+LEARNO.NET is an initiative of the European Journalism Centre
+(EJC). The EJC is a non-profit international foundation with the
+mission to improve and strengthen journalism and the news media in the
+interest of a functioning democratic public sphere. In this spirit,
+the EJC has always focused very much on training and capacity
+building, and LEARNO.NET is the next logical step on that way.
 
-*** Naked Data, Code for South Africa Newsletter
- http://code4sa.org/newsletter/
+** HTML
+   :PROPERTIES:
+   :Autoría:  Raúl Jiménez Ortega
+   :URL:      http://www.cursohtml5desdecero.com
+   :Licencia: CC-BY-NC-SA 4.0 Internacional
+   :Repo:     https://github.com/hhkaos/cursohtml5desdecero/
+   :END:
 
-** Ideas
+- Enseñar los elementos más comunes de HTML5, CSS3 y JavaScript.
+- Mostrar dónde podrás resolver tus dudas cuando tengas problemas.
+- Explicar cómo trabajar con algunas de las herramientas que usan los profesionales del mundo real como son Github o las herramientas para desarrolladores de Google Chrome.
 
-*** Calendario en Google
-*** Calendario en ICS
-*** Tinyletter
-*** Schema.org
-*** Orgmode
+** Curso gratuito de SIG aplicado a gestión municipal
+   :PROPERTIES:
+   :URL:      https://blog.gvsig.org/2017/09/25/curso-gratuito-de-sistemas-de-informacion-geografica-aplicados-a-gestion-municipal-temario-y-1er-modulo-diferencias-entre-sig-y-cad/
+   :END:
+[[https://blog.gvsig.org/2017/09/25/curso-gratuito-de-sistemas-de-informacion-geografica-aplicados-a-gestion-municipal-temario-y-1er-modulo-diferencias-entre-sig-y-cad/][Curso gratuito]] para adquirir toda la formación necesaria para aplicar los Sistemas de Información Geográfica a la gestión municipal. Un curso basado en la utilización de la suite de productos gvSIG, un catálogo de soluciones en software libre para trabajar con la componente ‘Geo’ y que se compone de soluciones de escritorio, móvil y web.
+* Enlaces de interés
+
+** Naked Data, Code for South Africa Newsletter
+http://code4sa.org/newsletter/
+
+* Ideas
+- [ ] Calendario en Google
+- [ ] Calendario en ICS
+- [ ] Tinyletter
+- [ ] Schema.org

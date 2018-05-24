@@ -1,200 +1,240 @@
-<!doctype html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2018-05-24 jue 08:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Datagenda, la agenda del Datalab</title>
-<!-- 2017-11-29 mié 09:16 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Org-mode">
-<meta name="author" content="Adolfo Antón Bravo">
-
-<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Adolfo Antón Bravo" />
+<meta name="description" content="Calendario de eventos relacionados con el conocimiento abierto para 2016"
+ />
 <style type="text/css">
-/* org mode styles on top of twbs */
-
-html {
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
     position: relative;
-    min-height: 100%;
-}
-
-body {
-    font-size: 18px;
-    margin-bottom: 105px;
-}
-
-footer {
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 101px;
-    background-color: #f5f5f5;
-}
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-footer > div {
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
     padding: 10px;
-}
-
-footer p {
-    margin: 0 0 5px;
-    text-align: center;
-    font-size: 16px;
-}
-
-#table-of-contents {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-blockquote p {
-    font-size: 18px;
-}
-
-pre {
-    font-size: 16px;
-}
-
-.footpara {
-    display: inline-block;
-}
-
-figcaption {
-  font-size: 16px;
-  color: #666;
-  font-style: italic;
-  padding-bottom: 15px;
-}
-
-/* from twbs docs */
-
-.bs-docs-sidebar.affix {
-    position: static;
-}
-@media (min-width: 768px) {
-    .bs-docs-sidebar {
-        padding-left: 20px;
-    }
-}
-
-/* All levels of nav */
-.bs-docs-sidebar .nav > li > a {
-    display: block;
-    padding: 4px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #999;
-}
-.bs-docs-sidebar .nav > li > a:hover,
-.bs-docs-sidebar .nav > li > a:focus {
-    padding-left: 19px;
-    color: #A1283B;
-    text-decoration: none;
-    background-color: transparent;
-    border-left: 1px solid #A1283B;
-}
-.bs-docs-sidebar .nav > .active > a,
-.bs-docs-sidebar .nav > .active:hover > a,
-.bs-docs-sidebar .nav > .active:focus > a {
-    padding-left: 18px;
-    font-weight: bold;
-    color: #A1283B;
-    background-color: transparent;
-    border-left: 2px solid #A1283B;
-}
-
-/* Nav: second level (shown on .active) */
-.bs-docs-sidebar .nav .nav {
-    display: none; /* Hide by default, but at >768px, show it */
-    padding-bottom: 10px;
-}
-.bs-docs-sidebar .nav .nav > li > a {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 30px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.bs-docs-sidebar .nav .nav > li > a:hover,
-.bs-docs-sidebar .nav .nav > li > a:focus {
-    padding-left: 29px;
-}
-.bs-docs-sidebar .nav .nav > .active > a,
-.bs-docs-sidebar .nav .nav > .active:hover > a,
-.bs-docs-sidebar .nav .nav > .active:focus > a {
-    padding-left: 28px;
-    font-weight: 500;
-}
-
-/* Nav: third level (shown on .active) */
-.bs-docs-sidebar .nav .nav .nav {
-    padding-bottom: 10px;
-}
-.bs-docs-sidebar .nav .nav .nav > li > a {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 40px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.bs-docs-sidebar .nav .nav .nav > li > a:hover,
-.bs-docs-sidebar .nav .nav .nav > li > a:focus {
-    padding-left: 39px;
-}
-.bs-docs-sidebar .nav .nav .nav > .active > a,
-.bs-docs-sidebar .nav .nav .nav > .active:hover > a,
-.bs-docs-sidebar .nav .nav .nav > .active:focus > a {
-    padding-left: 38px;
-    font-weight: 500;
-}
-
-/* Show and affix the side nav when space allows it */
-@media (min-width: 992px) {
-    .bs-docs-sidebar .nav > .active > ul {
-        display: block;
-    }
-    /* Widen the fixed sidebar */
-    .bs-docs-sidebar.affix,
-    .bs-docs-sidebar.affix-bottom {
-        width: 213px;
-    }
-    .bs-docs-sidebar.affix {
-        position: fixed; /* Undo the static from mobile first approach */
-        top: 20px;
-    }
-    .bs-docs-sidebar.affix-bottom {
-        position: absolute; /* Undo the static from mobile first approach */
-    }
-    .bs-docs-sidebar.affix .bs-docs-sidenav,.bs-docs-sidebar.affix-bottom .bs-docs-sidenav {
-        margin-top: 0;
-        margin-bottom: 0
-    }
-}
-@media (min-width: 1200px) {
-    /* Widen the fixed sidebar again */
-    .bs-docs-sidebar.affix-bottom,
-    .bs-docs-sidebar.affix {
-        width: 263px;
-    }
-}
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css"/>
 <script type="text/javascript">
-$(function() {
-    'use strict';
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
 
-    $('.bs-docs-sidebar li').first().addClass('active');
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
-    $(document.body).scrollspy({target: '.bs-docs-sidebar'});
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
 
-    $('.bs-docs-sidebar').affix();
-});
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 </head>
 <body>
-<div id="content" class="container">
-<div class="row"><div class="col-md-9"><h1 class="title">Datagenda, la agenda del Datalab</h1>
+<div id="content">
+<h1 class="title">Datagenda, la agenda del Datalab</h1>
 <p>
-Agenda de eventos relacionados o de interés para las distintas comunidades de datos: periodismodatos, datosabiertos, datascientists, conocimiento abierto, etc.
+Agenda de eventos relacionados o de interés para las distintas comunidades de datos: periodismodatos, visualización de datos, datosabiertos, datascientists, conocimiento abierto, etc.
 </p>
 
 <p>
@@ -202,559 +242,181 @@ Si tienes un evento, una beca, una oferta de trabajo, un curso, en enlace de int
 </p>
 
 <p>
-Navega en las actividades de <a href="https://github.com/medialab-prado/datagenda/blob/master/2017.org">2017</a> o descárgate los archivos <a href="https://github.com/medialab-prado/agenda/blob/master/2017.ics">ics</a>
-</p>
-
-<p>
 La estructura de los documentos es:
 </p>
 
 <ul class="org-ul">
-<li>Actividades por meses
-</li>
-<li>Actividades todo el año
-</li>
-<li>Becas y ofertas de trabajo
-</li>
-<li>Cursos
-</li>
-<li>Enlaces de interés
-</li>
-<li>Ideas
-</li>
+<li>Actividades por meses</li>
+<li>Actividades todo el año</li>
+<li>Becas y ofertas de trabajo</li>
+<li>Cursos</li>
+<li>Enlaces de interés</li>
+<li>Ideas</li>
 </ul>
 
-<p>
-La <i>Datagenda</i> es un proyecto del <a href="http://medialab-prado.es/visualizar">Datalab</a> de Medialab-Prado.
-</p>
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">Actividades por meses</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Enero 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Taller de Periodismo de Datos El País</h4>
-</div>
-<div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Mi primera configuración Emacs</h4>
-<div class="outline-text-4" id="text-">
-<ul class="org-ul">
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-01-31 mar 18:30&gt;&#x2013;&lt;2017-01-31 mar 20:30&gt;</span></span>
-</li>
-<li>Dónde: Medialab-Prado, Alameda 15, 28014, Madrid
-</li>
-<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a>
-</li>
-<li>URL: <a href="https://www.meetup.com/es-ES/Grupo-de-Usuarios-de-R-de-Madrid/events/236546948/">https://www.meetup.com/es-ES/Grupo-de-Usuarios-de-R-de-Madrid/events/236546948/</a>
-</li>
-</ul>
 
-<p>
-Si tus compañerxs te miran raro cuando abres Vim, si sientes envidia
-de los magos que usan emacs y te han hablado de org, magit y todas las
-maravillas; si has instalado Emacs, y es totalmente distinto a lo que
-habías visto, blanco y vacío, no sabes como usarlo&#x2026;
-</p>
-
-<p>
-En esta charla hablaremos un poco de como empezar con emacs, una
-pequeña introducción a elisp y como configurar emacs a tu gusto.
-</p>
-
-<p>
-Los temas que se cubrirán serán:
-</p>
-<ul class="org-ul">
-<li>Introducción a Emacs
-</li>
-<li>Introducción a elisp
-</li>
-<li>Mi primera configuración
-</li>
-<li>Configuración modular
-</li>
-<li>Configuración basada en orgmode
-</li>
-</ul>
+<div id="outline-container-org9b4d936" class="outline-2">
+<h2 id="org9b4d936">Actividades por meses</h2>
+<div class="outline-text-2" id="text-org9b4d936">
 </div>
+<div id="outline-container-org85e6695" class="outline-3">
+<h3 id="org85e6695">Enero 2018</h3>
+<div class="outline-text-3" id="text-org85e6695">
 </div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Abril 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Dataharvest 2017</h4>
-<div class="outline-text-4" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-05-18 mié&gt;&#x2013;&lt;2016-05-21 sáb&gt;</span></span>
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Mayo 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">V Jornadas Periodismo Datos #JPD17</h4>
-<div class="outline-text-4" id="text-">
-<ul class="org-ul">
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-05-04 jue&gt;&#x2013;&lt;2017-05-07 dom&gt;</span></span>
-</li>
-<li>Dónde: Medialab-Prado, Alameda 15, 28014, Madrid
-</li>
-<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a>
-</li>
-<li>URL: <a href="http://medialab-prado.github.io/jpd17">http://medialab-prado.github.io/jpd17</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Junio 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Curso</h4>
-</div>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Septiembre 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Visualizar'17: Migraciones</h4>
-<div class="outline-text-4" id="text-">
-<p>
-Taller de visualización de datos <i>Visualizar'17: Migraciones</i>.
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-09-15 vie&gt;&#x2013;&lt;2017-09-30 sáb&gt;</span></span>
-</p>
-<ul class="org-ul">
-<li>Artículo: <a href="http://medialab-prado.es/article/visualizar17-migraciones">http://medialab-prado.es/article/visualizar17-migraciones</a>
-</li>
-<li>Convocatoria de proyectos:<a href="http://medialab-prado.es/article/visualizar17-migraciones-convocatoria-de-proyectos">http://medialab-prado.es/article/visualizar17-migraciones-convocatoria-de-proyectos</a>
-</li>
-<li>Proyectos seleccionados: <a href="http://medialab-prado.es/article/visualizar17-migraciones-proyectos-seleccionados">http://medialab-prado.es/article/visualizar17-migraciones-proyectos-seleccionados</a>
-</li>
-<li>Convocatoria de colaboradorxs:<a href="http://medialab-prado.es/article/visualizar17-migraciones-convocatoria-de-colaboradorxs">http://medialab-prado.es/article/visualizar17-migraciones-convocatoria-de-colaboradorxs</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Octubre 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Curso de datos abiertos adaptado a la administración local</h4>
-<div class="outline-text-4" id="text-">
-</div>
-
-<ul class="org-ul"><li><a id="sec-" name="sec-"></a>Introducción a los datos abiertos<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-09 lun&gt;</span></span>
-</p>
-<ul class="org-ul">
-<li>Descubriendo los datos abiertos
-</li>
-<li>Copyright, licencias y datos abiertos
-</li>
-<li>Usabilidad de los datos abiertos
-</li>
-<li>Ejemplos
-</li>
-</ul>
-</div>
-</li>
-
-<li><a id="sec-" name="sec-"></a>Modelo de apertura de datos<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-10 mar&gt;</span></span>
-</p>
-
-
-<ul class="org-ul">
-<li>Protocolos de apertura de datos
-</li>
-<li>Recomendaciones de ejecución
-</li>
-</ul>
-</div>
-</li>
-
-<li><a id="sec-" name="sec-"></a>Marco legal<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-10 mar&gt;</span></span>
-</p>
-
-
-<ul class="org-ul">
-<li>Directivas europeas y otras normas e iniciativas internacionales
-</li>
-<li>Normativa nacional (y ejemplos de situación en otros países)
-</li>
-<li>Normativa regional
-</li>
-<li>Normativa local
-</li>
-<li>Licencias de datos
-</li>
-</ul>
-</div>
-</li>
-
-<li><a id="sec-" name="sec-"></a>Datos enlazados. Teoría y práctica<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-17 mar&gt;</span></span>
-</p>
-
-
-<ul class="org-ul">
-<li>Descubriendo los datos abiertos
-</li>
-<li>Copyright, licencias y datos abiertos
-</li>
-<li>Usabilidad de los datos abiertos
-</li>
-<li>Fundamentos de la web semántica y conjuntos de datos
-</li>
-<li>Vocabularios y conjuntos de datos
-</li>
-<li>Empezando con datos abiertos en la práctica
-</li>
-<li>Publicación de datos enlazados: Virtuoso y Pubby
-</li>
-</ul>
-</div>
-</li>
-
-<li><a id="sec-" name="sec-"></a>Vocabularios, modelos de datos y ontologías<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-18 mié&gt;</span></span>
-</p>
-
-<ul class="org-ul">
-<li>Introducción a la web semántica
-</li>
-<li>RDF (S)
-</li>
-<li>OWL
-</li>
-<li>Protege
-</li>
-<li>Herramientas para documentación y publicación
-</li>
-</ul>
-</div>
-</li>
-
-<li><a id="sec-" name="sec-"></a>Extracción, transformación y carga de datos (ETL)<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-25 mié&gt;</span></span>
-</p>
-
-<ul class="org-ul">
-<li>Introducción (ETL vs NoETL)
-</li>
-<li>Modelos de datos (SQL vs No-SQL)
-</li>
-<li>Patrones de transformación (Batch vs Streaming)
-</li>
-<li>Herramientas (Rule-based vs Code-bassed)
-</li>
-</ul>
-</div>
-</li>
-
-<li><a id="sec-" name="sec-"></a>Publicación en CKAN y uso de su API<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-26 jue&gt;</span></span>
-</p>
-
-<ul class="org-ul">
-<li>Conceptos básicos (organizaciones, grupos, datasets, recursos)
-</li>
-<li>Añadiendo nuevas funcionalidades – Uso de extensiones
-</li>
-<li>Carga automática de datos – Uso de la API
-</li>
-<li>DCAT
-</li>
-<li>Federación con datos.gob.es
-</li>
-</ul>
-</div>
-</li>
-
-<li><a id="sec-" name="sec-"></a>Visualización de datos<br ><div class="outline-text-5" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-26 jue&gt;</span></span>
-</p>
-
-<ul class="org-ul">
-<li>Grafos
-</li>
-<li>Métricas sobre grafos
-</li>
-<li>Visualización de big data
-</li>
-</ul>
-</div>
-</li></ul>
-</div>
-<div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Gigapp 2017</h4>
-<div class="outline-text-4" id="text-">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-25 mié&gt;&#x2013;&lt;2017-10-28 sáb&gt;</span></span>
-</p>
-</div>
-</div>
-<div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Transeuropa 2017</h4>
-<div class="outline-text-4" id="text-">
-<p>
-:URL:      <a href="https://transeuropafestival.eu/">https://transeuropafestival.eu/</a>
-</p>
-<p>
-A festival of Arts, Politics and Culture
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-10-25 mié&gt;&#x2013;&lt;2017-10-29 dom&gt;</span></span>
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Noviembre 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Asedie: 9ª Conferencia Internacional de Reutilización de Información del Sector Público</h4>
-<div class="outline-text-4" id="text-">
-<p>
-<a href="http://www.asedie.es/9_conferencia_internacional.html">http://www.asedie.es/9_conferencia_internacional.html</a>
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Diciembre 2017</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">CryptoMarbella Hackathon</h4>
-<div class="outline-text-4" id="text-">
-<p>
-<a href="https://cryptomarbella.com/">Crypto Marbella Hackathon</a> provides a focused environment for teams to design, develop and complete an intense
-iteration of work, hopefully resulting in software/blockchain that solves one of the many complex challenges
-we face in society today.
-</p>
-<ul class="org-ul">
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-12-16 sáb&gt;</span></span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Enero 2018</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">El Confidencial Editors Lab</h4>
-<div class="outline-text-4" id="text-">
+<div id="outline-container-orgc604db5" class="outline-4">
+<h4 id="orgc604db5">El Confidencial Editors Lab</h4>
+<div class="outline-text-4" id="text-orgc604db5">
 <p>
 <a href="https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/">El Confidencial Editors Lab</a>, Prototyping the Future of News in Madrid, 18-19 January 2018.
 </p>
 <ul class="org-ul">
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-01-17 mié&gt;&#x2013;&lt;2018-01-18 jue&gt;</span></span>
-</li>
-<li>Dónde: El Confidencial
-</li>
-<li>URL: <a href="https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/">https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/</a>
-</li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-01-17 mié&gt;&#x2013;&lt;2018-01-18 jue&gt;</span></span></li>
+<li>Dónde: El Confidencial</li>
+<li>URL: <a href="https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/">https://www.globaleditorsnetwork.org/programmes/editors-lab/el-confidencial-editors-lab-2018/</a></li>
 </ul>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Febrero 2018</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Día del Amor por el Software Libre</h4>
-<div class="outline-text-4" id="text-">
+<div id="outline-container-org9341ca2" class="outline-3">
+<h3 id="org9341ca2">Febrero 2018</h3>
+<div class="outline-text-3" id="text-org9341ca2">
+</div>
+<div id="outline-container-orge775b91" class="outline-4">
+<h4 id="orge775b91">Día del Amor por el Software Libre</h4>
+<div class="outline-text-4" id="text-orge775b91">
 <ul class="org-ul">
-<li>Dónde: Medialab-Prado 
-</li>
-<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a>
-</li>
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-02-14 mié&gt;</span></span>
-</li>
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-02-14 mié&gt;</span></span></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Software Libre para la ciencia de datos</h4>
-<div class="outline-text-4" id="text-">
+<div id="outline-container-orge3b3b53" class="outline-4">
+<h4 id="orge3b3b53">Software Libre para la ciencia de datos</h4>
+<div class="outline-text-4" id="text-orge3b3b53">
 <ul class="org-ul">
-<li>Dónde: Medialab-Prado 
-</li>
-<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a>
-</li>
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-02-15 jue&gt;&#x2013;&lt;2018-02-17 sáb&gt;</span></span>
-</li>
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-02-15 jue&gt;&#x2013;&lt;2018-02-17 sáb&gt;</span></span></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Lanzamiento de la Convocatoria del Taller de Periodismo de Datos 2018</h4>
-<div class="outline-text-4" id="text-">
+<div id="outline-container-org3d51b92" class="outline-4">
+<h4 id="org3d51b92">Lanzamiento de la Convocatoria del Taller de Periodismo de Datos 2018</h4>
+<div class="outline-text-4" id="text-org3d51b92">
 <ul class="org-ul">
-<li>Dónde: Medialab-Prado 
-</li>
-<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a>
-</li>
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-02-01 jue&gt;</span></span>
-</li>
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-02-01 jue&gt;</span></span></li>
 </ul>
 <p>
 Taller que gira en torno a la movilidad de Madrid. Se plantea el siguiente itinerario:
 </p>
 <ul class="org-ul">
-<li>Febrero, formación en datos, Semana del Software Libre
-</li>
-<li>Marzo, búsqueda de datos, Día de los Datos Abiertos.
-</li>
-<li>Abril-Junio: 3 sesiones de trabajo con los proyectos seleccionados 
-</li>
+<li>Febrero, formación en datos, Semana del Software Libre</li>
+<li>Marzo, búsqueda de datos, Día de los Datos Abiertos.</li>
+<li>Abril-Junio: 3 sesiones de trabajo con los proyectos seleccionados</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Marzo 2018</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">Día de los datos abiertos</h4>
-<div class="outline-text-4" id="text-">
+<div id="outline-container-org5dfe0f8" class="outline-3">
+<h3 id="org5dfe0f8">Marzo 2018</h3>
+<div class="outline-text-3" id="text-org5dfe0f8">
+</div>
+<div id="outline-container-org94e071c" class="outline-4">
+<h4 id="org94e071c">Día de los datos abiertos</h4>
+<div class="outline-text-4" id="text-org94e071c">
 <ul class="org-ul">
-<li>Dónde: Medialab-Prado 
-</li>
-<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a>
-</li>
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-03-03 sáb&gt;</span></span>
-</li>
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-03-03 sáb&gt;</span></span></li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Mayo 2018</h3>
-<div class="outline-text-3" id="text-">
-</div><div id="outline-container-sec-" class="outline-4">
-<h4 id="sec-">GEN Summit 2018</h4>
-<div class="outline-text-4" id="text-">
+<div id="outline-container-org9f328a9" class="outline-3">
+<h3 id="org9f328a9">Mayo 2018</h3>
+<div class="outline-text-3" id="text-org9f328a9">
+</div>
+<div id="outline-container-org2281916" class="outline-4">
+<h4 id="org2281916">GEN Summit 2018</h4>
+<div class="outline-text-4" id="text-org2281916">
 <ul class="org-ul">
-<li>Dónde: Medialab-Prado 
-</li>
-<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a>
-</li>
-<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-30 mié&gt;&#x2013;&lt;2018-06-01 vie&gt;</span></span>
-</li>
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-30 mié&gt;&#x2013;&lt;2018-06-01 vie&gt;</span></span></li>
 </ul>
 <p>
 The <a href="https://www.gensummit.org/">GEN Summit</a> will present you with solutions and insights that can make your journalism more impactful – and sustainable. We’re making a place for thought-provoking conversations across three themes:  
 </p>
 <ul class="org-ul">
-<li>Disruption (30 May)
-</li>
-<li>Personalisation (31 May)
-</li>
-<li>Monetisation (1 June)
-</li>
+<li>Disruption (30 May)</li>
+<li>Personalisation (31 May)</li>
+<li>Monetisation (1 June)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga2279f8" class="outline-3">
+<h3 id="orga2279f8">Junio 2018</h3>
+<div class="outline-text-3" id="text-orga2279f8">
+</div>
+<div id="outline-container-org8fa779e" class="outline-4">
+<h4 id="org8fa779e">Taller de Periodismo de Datos 2018, primera sesión de trabajo</h4>
+<div class="outline-text-4" id="text-org8fa779e">
+<ul class="org-ul">
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-08 vie&gt;&#x2013;&lt;2018-06-10 dom&gt;</span></span></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgeaca016" class="outline-4">
+<h4 id="orgeaca016">Taller de Periodismo de Datos 2018, segunda sesión de trabajo</h4>
+<div class="outline-text-4" id="text-orgeaca016">
+<ul class="org-ul">
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-06-22 vie&gt;&#x2013;&lt;2018-06-24 dom&gt;</span></span></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">Todo el año 2017</h2>
+<div id="outline-container-org34b9e5c" class="outline-2">
+<h2 id="org34b9e5c">Todo 2018</h2>
+<div class="outline-text-2" id="text-org34b9e5c">
 </div>
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">Becas, ofertas de trabajo</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Project lead data and civil liberties</h3>
-<div class="outline-text-3" id="text-">
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">GHC17</h3>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Pass-It-On Awards Program</h3>
-<div class="outline-text-3" id="text-">
-<p>
-<a href="https://anitaborg.org/awards-grants/pass-it-on-awards-program/">https://anitaborg.org/awards-grants/pass-it-on-awards-program/</a>
-The Anita Borg Systers Pass-It-On (PIO) Awards honor Anita Borg’s desire to create a network of  women technologists helping one another. The cash awards, funded by donations from the Systers Online Community and others, are intended as means for women established in technological fields to support women seeking their place in the fields of technology. The program is called “Pass-It-On” because it comes with the moral obligation to “pass on” the benefits gained from the award.
-</p>
-
-<p>
-El periodo de aplicación de este año fue del <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-12-14 mié&gt; </span></span> al <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-03-29 mié&gt;</span></span>
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Communications internship</h3>
-<div class="outline-text-3" id="text-">
-<p>
-  :URL:      <a href="https://tacticaltech.org/communications-internship-paid">https://tacticaltech.org/communications-internship-paid</a>
-  :Organización: Tactical Tech
-  :END:**
-Translator
-  :PROPERTIES:
-  :Organización: Tactical Tech
-  :URL:      <a href="https://tacticaltech.org/jobs/translator">https://tacticaltech.org/jobs/translator</a>
-</p>
-<p>
-We are looking for translators who can translate from English into
-one of our core languages (Arabic, French, Portuguese, Russian,
-Spanish).
-</p>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">System Operations and Development Position</h3>
-<div class="outline-text-3" id="text-">
-<p>
-Formará parte del equipo de tecnologías de la información y será responsable de las operación y mantenimiento de los ordenadores, la red y los sistemas relacionados.
-</p>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Consultants en Tactical Technology Collective</h3>
-<div class="outline-text-3" id="text-">
-<p>
-Diversas ofertas de trabajo como consultorxs para TTC: researchers, trainers, facilitators, translators, designers (various), illustrators, animation designers, editor.
-</p>
+<div id="outline-container-org4279a2d" class="outline-3">
+<h3 id="org4279a2d">JournocodersMAD</h3>
+<div class="outline-text-3" id="text-org4279a2d">
+<ul class="org-ul">
+<li>Dónde: Medialab-Prado</li>
+<li>Mapa: <a href="http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359">http://www.openstreetmap.org/way/219016719#map=19/40.41044/-3.69359</a></li>
+<li>Cuándo: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-05-24 jue +1w&gt;</span></span></li>
+</ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">Cursos</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Learno.net</h3>
-<div class="outline-text-3" id="text-">
+<div id="outline-container-orgbfb63be" class="outline-2">
+<h2 id="orgbfb63be">Becas, ofertas de trabajo</h2>
+</div>
+<div id="outline-container-org168a6ed" class="outline-2">
+<h2 id="org168a6ed">Cursos</h2>
+<div class="outline-text-2" id="text-org168a6ed">
+</div>
+<div id="outline-container-org232e147" class="outline-3">
+<h3 id="org232e147">Learno.net</h3>
+<div class="outline-text-3" id="text-org232e147">
 <p>
 LEARNO.NET is an initiative of the European Journalism Centre
 (EJC). The EJC is a non-profit international foundation with the
@@ -766,57 +428,33 @@ building, and LEARNO.NET is the next logical step on that way.
 </div>
 </div>
 
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">HTML</h3>
-<div class="outline-text-3" id="text-">
+<div id="outline-container-org276ae9a" class="outline-3">
+<h3 id="org276ae9a">HTML</h3>
+<div class="outline-text-3" id="text-org276ae9a">
 <ul class="org-ul">
-<li>Enseñar los elementos más comunes de HTML5, CSS3 y JavaScript.
-</li>
-<li>Mostrar dónde podrás resolver tus dudas cuando tengas problemas.
-</li>
-<li>Explicar cómo trabajar con algunas de las herramientas que usan los profesionales del mundo real como son Github o las herramientas para desarrolladores de Google Chrome.
-</li>
+<li>Enseñar los elementos más comunes de HTML5, CSS3 y JavaScript.</li>
+<li>Mostrar dónde podrás resolver tus dudas cuando tengas problemas.</li>
+<li>Explicar cómo trabajar con algunas de las herramientas que usan los profesionales del mundo real como son Github o las herramientas para desarrolladores de Google Chrome.</li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Lookout 360º</h3>
-<div class="outline-text-3" id="text-">
-<p>
-A 6-month Climate Change Immersive Story Accelerator
-Lookout360° is the pilot project of our new 6-month immersive storytelling accelerator programme. It combines in-field training and 3-month mentorship to support journalists produce immersive stories with a focus on climate change.
-</p>
-
-<p>
-The European Forest Institute and the Global Editors Network are joining forces to launch the pilot project which supports journalists produce 360-degree videos on climate change and people’s lives.
-</p>
-
-<p>
-A total of 10 journalists and producers from 10 media houses based in Europe and beyond will be invited to a bootcamp that offers a training on climate change storytelling, as well as a 101 crash course on 360° video filming and post-production. To offer a unique first-hand experience in producing a story focusing on how the local communities are being affected by climate change, the bootcamp will take place in the extreme north of Finland, where the Sami people, the indigenous communities in Lapland, live.
-</p>
-
-<p>
-After the in-field bootcamp, the programme gathers scientists and 360-degree video experts to support the participants in developing, iterating and publishing a story within a 3-month period. The final projects will be showcased at the GEN Summit in Lisbon on 30 May – 1 June 2018, both on the conference main stage and in the GEN Dome, an immersive storytelling-focused exhibition.
-</p>
-</div>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Curso gratuito de SIG aplicado a gestión municipal</h3>
-<div class="outline-text-3" id="text-">
+<div id="outline-container-orgb1db908" class="outline-3">
+<h3 id="orgb1db908">Curso gratuito de SIG aplicado a gestión municipal</h3>
+<div class="outline-text-3" id="text-orgb1db908">
 <p>
 <a href="https://blog.gvsig.org/2017/09/25/curso-gratuito-de-sistemas-de-informacion-geografica-aplicados-a-gestion-municipal-temario-y-1er-modulo-diferencias-entre-sig-y-cad/">Curso gratuito</a> para adquirir toda la formación necesaria para aplicar los Sistemas de Información Geográfica a la gestión municipal. Un curso basado en la utilización de la suite de productos gvSIG, un catálogo de soluciones en software libre para trabajar con la componente ‘Geo’ y que se compone de soluciones de escritorio, móvil y web.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">Enlaces de interés</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Naked Data, Code for South Africa Newsletter</h3>
-<div class="outline-text-3" id="text-">
+<div id="outline-container-orge03db29" class="outline-2">
+<h2 id="orge03db29">Enlaces de interés</h2>
+<div class="outline-text-2" id="text-orge03db29">
+</div>
+<div id="outline-container-org121f957" class="outline-3">
+<h3 id="org121f957">Naked Data, Code for South Africa Newsletter</h3>
+<div class="outline-text-3" id="text-org121f957">
 <p>
 <a href="http://code4sa.org/newsletter/">http://code4sa.org/newsletter/</a>
 </p>
@@ -824,139 +462,22 @@ After the in-field bootcamp, the programme gathers scientists and 360-degree vid
 </div>
 </div>
 
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">Ideas</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Calendario en Google</h3>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Calendario en ICS</h3>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Tinyletter</h3>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Schema.org</h3>
-</div>
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Orgmode</h3>
-</div>
-</div>
-</div><div class="col-md-3"><nav id="table-of-contents">
-<div id="text-table-of-contents" class="bs-docs-sidebar">
-<ul class="nav">
-<li><a href="#sec-">Actividades por meses</a>
-<ul class="nav">
-<li><a href="#sec-">Enero 2017</a>
-<ul class="nav">
-<li><a href="#sec-">Taller de Periodismo de Datos El País</a></li>
-<li><a href="#sec-">Mi primera configuración Emacs</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Abril 2017</a>
-<ul class="nav">
-<li><a href="#sec-">Dataharvest 2017</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Mayo 2017</a>
-<ul class="nav">
-<li><a href="#sec-">V Jornadas Periodismo Datos #JPD17</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Junio 2017</a>
-<ul class="nav">
-<li><a href="#sec-">Curso</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Septiembre 2017</a>
-<ul class="nav">
-<li><a href="#sec-">Visualizar'17: Migraciones</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Octubre 2017</a>
-<ul class="nav">
-<li><a href="#sec-">Curso de datos abiertos adaptado a la administración local</a></li>
-<li><a href="#sec-">Gigapp 2017</a></li>
-<li><a href="#sec-">Transeuropa 2017</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Noviembre 2017</a>
-<ul class="nav">
-<li><a href="#sec-">Asedie: 9ª Conferencia Internacional de Reutilización de Información del Sector Público</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Diciembre 2017</a>
-<ul class="nav">
-<li><a href="#sec-">CryptoMarbella Hackathon</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Enero 2018</a>
-<ul class="nav">
-<li><a href="#sec-">El Confidencial Editors Lab</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Febrero 2018</a>
-<ul class="nav">
-<li><a href="#sec-">Día del Amor por el Software Libre</a></li>
-<li><a href="#sec-">Software Libre para la ciencia de datos</a></li>
-<li><a href="#sec-">Lanzamiento de la Convocatoria del Taller de Periodismo de Datos 2018</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Marzo 2018</a>
-<ul class="nav">
-<li><a href="#sec-">Día de los datos abiertos</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Mayo 2018</a>
-<ul class="nav">
-<li><a href="#sec-">GEN Summit 2018</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#sec-">Todo el año 2017</a></li>
-<li><a href="#sec-">Becas, ofertas de trabajo</a>
-<ul class="nav">
-<li><a href="#sec-">Project lead data and civil liberties</a></li>
-<li><a href="#sec-">GHC17</a></li>
-<li><a href="#sec-">Pass-It-On Awards Program</a></li>
-<li><a href="#sec-">Communications internship</a></li>
-<li><a href="#sec-">System Operations and Development Position</a></li>
-<li><a href="#sec-">Consultants en Tactical Technology Collective</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Cursos</a>
-<ul class="nav">
-<li><a href="#sec-">Learno.net</a></li>
-<li><a href="#sec-">HTML</a></li>
-<li><a href="#sec-">Lookout 360º</a></li>
-<li><a href="#sec-">Curso gratuito de SIG aplicado a gestión municipal</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Enlaces de interés</a>
-<ul class="nav">
-<li><a href="#sec-">Naked Data, Code for South Africa Newsletter</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Ideas</a>
-<ul class="nav">
-<li><a href="#sec-">Calendario en Google</a></li>
-<li><a href="#sec-">Calendario en ICS</a></li>
-<li><a href="#sec-">Tinyletter</a></li>
-<li><a href="#sec-">Schema.org</a></li>
-<li><a href="#sec-">Orgmode</a></li>
-</ul>
-</li>
+<div id="outline-container-orgd883abf" class="outline-2">
+<h2 id="orgd883abf">Ideas</h2>
+<div class="outline-text-2" id="text-orgd883abf">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Calendario en Google</li>
+<li class="off"><code>[&#xa0;]</code> Calendario en ICS</li>
+<li class="off"><code>[&#xa0;]</code> Tinyletter</li>
+<li class="off"><code>[&#xa0;]</code> Schema.org</li>
 </ul>
 </div>
-</nav>
-</div></div></div>
-<footer id="postamble" class="">
-<div><p class="author">Author: Adolfo Antón Bravo</p>
-<p class="date">Created: 2017-11-29 mié 09:16</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.2 (<a href="http://orgmode.org">Org-mode</a> 9.1.2)</p>
 </div>
-</footer>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Adolfo Antón Bravo</p>
+<p class="date">Created: 2018-05-24 jue 08:26</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>
