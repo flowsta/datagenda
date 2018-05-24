@@ -1,7 +1,6 @@
-#+BLOG: blog.infotics.es
-#+CATEGORY: calendario, evento, periodismodatos, datajournalism 
-#+TAGS: boletín, periodismodatos, tinyletter, 
-#+DESCRIPTION: Calendario de eventos relacionados con el conocimiento abierto para 2016
+#+CATEGORY: calendario, eventos, datos
+#+TAGS: boletín, periodismodatos, tinyletter, datascience, ciencia de datos, visualización de datos, periodismo de datos, journocoders, datos abiertos 
+#+DESCRIPTION: Calendario de eventos relacionados con la ciencia de datos
 #+TITLE: Datagenda, la agenda del Datalab
 #+OPTIONS: num:nil todo:nil pri:nil tags:nil ^:nil TeX:nil toc:nil
 #+OPTIONS:  p:with-planning
