@@ -4,13 +4,14 @@
 #+TITLE: Datagenda, la agenda del Datalab
 #+OPTIONS: num:nil todo:nil pri:nil tags:nil ^:nil TeX:nil toc:nil
 #+OPTIONS:  p:with-planning
+#+OPTIONS: html-style:nil
 #+HTML_HTML: <html lang="es">
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 
 
 Agenda de eventos relacionados o de interés para las distintas comunidades de datos: periodismodatos, visualización de datos, datosabiertos, datascientists, conocimiento abierto, etc.
 
-Si tienes un evento, una beca, una oferta de trabajo, un curso, en enlace de interés o cualquier otra idea, duda o sugerencia que proponer, añade [[https://github.com/medialab-prado/datagenda/issues/new][una nueva issue]].
+Si tienes un evento, una beca, una oferta de trabajo, un curso, en enlace de interés o cualquier otra idea, duda o sugerencia que proponer, añade [[https://github.com/flowsta/datagenda/issues/new][una nueva issue]].
 
 La estructura de los documentos es:
 
